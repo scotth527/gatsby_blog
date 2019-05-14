@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
+import MyNavbar from "./navbar.js"
 import Header from "./header"
 import "./layout.css"
 
@@ -18,7 +18,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
     <div>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <MyNavbar title={data.site.siteMetadata.title}/>
         <div
           style={{
             margin: `0 auto`,

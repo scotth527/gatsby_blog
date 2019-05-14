@@ -15,8 +15,8 @@ export class IndexPage extends React.Component {
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
+        <p>Welcome to my page.</p>
+        <p>Always on the lookout for cool projects</p>
         <div className="border border-dark rounded" style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
           <Image />
         </div>
