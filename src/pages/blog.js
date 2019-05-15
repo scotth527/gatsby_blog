@@ -3,38 +3,44 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BlogCards from "../components/blogcards"
 
 const SecondPage = ({ data }) => (
   <Layout>
     <SEO title="Page two" />
     {/* <h1 style={{backgroundColor: 'green'}}>{data.site.siteMetadata.title}</h1> */}
-    <ul>
+    <div className="row">
+        <div className="col-12 d-flex justify-content between">
         {
             data.allMarkdownRemark.edges.map((item,index)=> {
                 return (
-                <Link to={item.node.frontmatter.path}><li>{"Take me to " + index + "blog"}</li></Link>
+                <BlogCards title={item.node.frontmatter.title} author={item.node.frontmatter.author} description={item.node.frontmatter.description} url={item.node.frontmatter.path}  date={item.node.frontmatter.date} />
             );
             })
         }
-        
-    </ul>
-    <p>Welcome to page 2</p>
-    <Link to="/page-3">Go to page 3/ </Link>
+        </div>
+    </div> 
+   
+    
   </Layout>
-)
+);
 
 export default SecondPage;
 
 export const query = graphql`
-  query {
-   allMarkdownRemark {
-    edges {
-        node {
-            frontmatter {
-                path
+    query {
+        allMarkdownRemark {
+            edges {
+                node {
+                    frontmatter {
+                        path
+                        title
+                        date
+                        description
+                        author
+                    }
+                }
             }
         }
     }
-   }
-  }
   `
