@@ -36,10 +36,10 @@ export default class MyNavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">About Me </NavLink>
+                <NavLink href="#about">About Me </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Projects</NavLink>
+                <NavLink href="#projects">Projects</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">Blog</NavLink>
@@ -48,7 +48,7 @@ export default class MyNavbar extends React.Component {
                 <NavLink href="https://github.com/reactstrap/reactstrap">Resume</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Contact me</NavLink>
+                <NavLink href="#contact">Contact me</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
