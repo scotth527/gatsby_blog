@@ -42,7 +42,7 @@ export default class MyNavbar extends React.Component {
                 <NavLink href="#projects">Projects</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Blog</NavLink>
+                <NavLink href="/blog">Blog</NavLink>
               </NavItem>
                <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">Resume</NavLink>

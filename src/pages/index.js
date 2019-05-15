@@ -19,10 +19,12 @@ export class IndexPage extends React.Component {
           <div className="row">
             
           </div>
-          <div className="text-center">
-            <h1 className="mt-3">Hi people</h1>
-            <p>Welcome to my page.</p>
-            <p>Always on the lookout for cool projects</p>
+          <div className="text-center d-flex">
+            <div>
+              <h1 className="mt-3">Hi people</h1>
+              <p>Welcome to my page.</p>
+              <p>Always on the lookout for cool projects</p>
+            </div>
             <div className="border border-dark rounded mx-auto" style={{ borderRadius: "100%" }}>
               <Image />
             </div>
