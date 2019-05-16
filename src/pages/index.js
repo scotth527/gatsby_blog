@@ -20,7 +20,7 @@ export class IndexPage extends React.Component {
           <div className="row">
             
           </div>
-          <div className="text-center mx-auto d-flex justify-content-around">
+          <div className="text-center mx-auto mt-3 mb-3 d-flex justify-content-around">
             <div>
               <h1 className="mt-3">Hi people</h1>
               <p>Welcome to my page.</p>
