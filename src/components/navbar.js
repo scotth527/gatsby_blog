@@ -31,10 +31,10 @@ export default class MyNavbar extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">{this.props.title}</NavbarBrand>
+          <NavbarBrand className="p-0" href="/">{this.props.title}</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className="ml-auto p-0" navbar>
               <NavItem>
                 <NavLink href="#about">About Me </NavLink>
               </NavItem>
@@ -45,10 +45,10 @@ export default class MyNavbar extends React.Component {
                 <NavLink href="/blog">Blog</NavLink>
               </NavItem>
                <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Resume</NavLink>
+                <NavLink href="https://drive.google.com/file/d/1L2XaP89p_Rab2rH69u1u6ShQjCTdN6-X/view?usp=sharing">Resume</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#contact">Contact me</NavLink>
+                <NavLink href="/#contact">Contact me</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

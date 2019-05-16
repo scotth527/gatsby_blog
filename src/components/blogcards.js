@@ -16,7 +16,7 @@ const BlogCards = (props) => {
 	};
     
   return (
-    <div className="mr-3 mb-3 mt-3">
+    <div className="ml-2 mr-2 mb-3 mt-3 col-3 p-0">
       <Card>
         <CardHeader>{props.title}</CardHeader>
         <CardBody>

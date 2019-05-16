@@ -10,7 +10,7 @@ const SecondPage = ({ data }) => (
     <SEO title="Page two" />
     {/* <h1 style={{backgroundColor: 'green'}}>{data.site.siteMetadata.title}</h1> */}
     <div className="row">
-        <div className="col-12 d-flex justify-content between">
+        <div className="col-12 mx-auto d-flex justify-content-around flex-wrap">
         {
             data.allMarkdownRemark.edges.map((item,index)=> {
                 return (

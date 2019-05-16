@@ -5,6 +5,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Contact from "../components/contactform"
+import Banner from "../components/jumbotron"
 
 export class IndexPage extends React.Component {
   constructor() {
@@ -19,22 +20,17 @@ export class IndexPage extends React.Component {
           <div className="row">
             
           </div>
-          <div className="text-center d-flex">
+          <div className="text-center mx-auto d-flex justify-content-around">
             <div>
               <h1 className="mt-3">Hi people</h1>
               <p>Welcome to my page.</p>
               <p>Always on the lookout for cool projects</p>
             </div>
-            <div className="border border-dark rounded mx-auto" style={{ borderRadius: "100%" }}>
+            <div className="border border-dark rounded mx-auto" style={{ width:"40%", borderRadius: "100%" }}>
               <Image />
             </div>
           </div>
-            <h2>See my thoughts</h2>
-            <ul>
-              <li><Link to="/page-2/">Go to page 2</Link></li>
-              <li><Link to="/blog/my-first-post" >Go to first blog </Link></li>
-              <li><Link to="/blog/my-second-post" >Go to second blog </Link></li>
-            </ul>
+            <Banner /> 
             <Contact />
         </div>
       </Layout>
