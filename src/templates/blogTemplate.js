@@ -9,19 +9,20 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout > 
-    <div className="col-9 mx-auto mt-3">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <p>{"By: " + frontmatter.author}</p>
-
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-        </div>
-        <p>{frontmatter.description}</p>
-        
+    <div className="container-fluid wrapper">
+      <div className="col-9 mx-auto mt-3">
+        <div className="blog-post">
+          <h1>{frontmatter.title}</h1>
+          <h2>{frontmatter.date}</h2>
+          <p>{"By: " + frontmatter.author}</p>
+  
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+          </div>
+          <p>{frontmatter.description}</p>
+      </div>
     </div>
     </Layout>
   )

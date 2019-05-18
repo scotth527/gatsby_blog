@@ -9,6 +9,19 @@ a.nav-link, .navbar-brand {
 body {
   margin: 0;
 }
+
+.container-fluid.wrapper {
+    position: relative;
+    min-height: 80vh;
+}
+
+footer {
+   position:absolute;
+   bottom:0;
+   padding-bottom: 2em;
+   min-height: 8vh;
+}
+
 article,
 aside,
 details,
@@ -39,6 +52,11 @@ progress {
 [hidden],
 template {
   display: none;
+}
+footer {
+    position:relative;
+    bottom:0;
+    height: 2em;
 }
 a {
   background-color: transparent;

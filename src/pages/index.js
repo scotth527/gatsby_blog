@@ -16,9 +16,11 @@ export class IndexPage extends React.Component {
 		return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <div className="container">
+        <div className="container-fluid wrapper">
           <div className="row">
-            
+            <div style={{height:"400px", backgroundSize: "cover contain",  backgroundRepeat: "no-repeat", backgroundImage: `url(${'https://images.pexels.com/photos/792199/pexels-photo-792199.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'})`}} className="col-12 text-dark text-center mx-auto">
+              <h1>Welcome to my site! </h1>
+            </div>
           </div>
           <div className="text-center mx-auto mt-3 mb-3 d-flex justify-content-around">
             <div>
@@ -30,6 +32,9 @@ export class IndexPage extends React.Component {
               <Image />
             </div>
           </div>
+            <div className="text-center">
+              <h2>Projects</h2>
+            </div>
             <Banner /> 
             <Contact />
         </div>

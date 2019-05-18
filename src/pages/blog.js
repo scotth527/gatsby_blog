@@ -14,7 +14,7 @@ const SecondPage = ({ data }) => (
         {
             data.allMarkdownRemark.edges.map((item,index)=> {
                 return (
-                <BlogCards title={item.node.frontmatter.title} author={item.node.frontmatter.author} description={item.node.frontmatter.description} url={item.node.frontmatter.path}  date={item.node.frontmatter.date} />
+                <BlogCards key={index} title={item.node.frontmatter.title} author={item.node.frontmatter.author} description={item.node.frontmatter.description} url={item.node.frontmatter.path}  date={item.node.frontmatter.date} />
             );
             })
         }
