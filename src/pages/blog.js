@@ -29,7 +29,10 @@ export default SecondPage;
 
 export const query = graphql`
     query {
-        allMarkdownRemark {
+        allMarkdownRemark(
+            filter: { frontmatter: { path: { ne : "/about-me" } } }
+            sort: { fields: [frontmatter___date], order: DESC}
+        ) {
             edges {
                 node {
                     frontmatter {
