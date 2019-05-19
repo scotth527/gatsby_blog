@@ -14,7 +14,15 @@ body {
     position: relative;
     min-height: 80vh;
 }
-
+.banner-text {
+  font-family: 'Monoton', cursive;
+  letter-spacing: 0.1em;
+  text-shadow:
+		-1px -1px 0 #FFFFFF,
+		1px -1px 0 #FFFFFF,
+		-1px 1px 0 #FFFFFF,
+		1px 1px 0 #FFFFFF;
+}
 footer {
    position:absolute;
    bottom:0;
