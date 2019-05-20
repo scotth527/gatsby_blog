@@ -31,9 +31,10 @@ const Layout = ({ children }) => (
           <main>{children}</main>
           <footer className="text-center pb-2 pt-2">
             Follow me on 
-            <a className="ml-1 mr-1 text-dark" target="_blank" href="https://github.com/scotth527"><FontAwesomeIcon size="2x" icon={faGithub} /></a>
-            <a className="ml-1 mr-1 text-dark" target="_blank" href="https://www.linkedin.com/in/scotth527/"><FontAwesomeIcon size="2x" icon={faLinkedin} /></a>
-            <a className="ml-1 mr-1 text-dark" target="_blank" href="https://stackoverflow.com/users/11364096/scotth527?tab=profile"><FontAwesomeIcon size="2x" icon={faStackOverflow} /></a>
+            <a className="ml-1 mr-1 text-dark" rel="noopener noreferrer" target="_blank" href="https://github.com/scotth527"><FontAwesomeIcon size="2x" icon={faGithub} /></a>
+            <a className="ml-1 mr-1 text-dark" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/scotth527/"><FontAwesomeIcon size="2x" icon={faLinkedin} /></a>
+            <a className="ml-1 mr-1 text-dark" rel="noopener noreferrer" target="_blank" href="https://stackoverflow.com/users/11364096/scotth527?tab=profile"><FontAwesomeIcon size="2x" icon={faStackOverflow} /></a>
+            <p>Scott Huang © 2019</p>
           </footer>
        
       </div>

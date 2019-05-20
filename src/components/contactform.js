@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from "prop-types";
   
 export default class Contact extends React.Component {
   constructor(props) {
@@ -12,7 +11,7 @@ export default class Contact extends React.Component {
   render() {
     return (
     <div id="contact">
-        <form className="col-lg-6 col-12 mx-auto text-center border border-dark rounded" action="https://formspree.io/scottyh527@gmail.com" method="POST">
+        <form className="col-lg-6 col-12 mx-auto text-center" action="https://formspree.io/scottyh527@gmail.com" method="POST">
             <h1 className="mt-3">Contact Me</h1>
             <div className="col-12 mx-auto d-flex flex-column">
                 <label className="mr-auto" htmlFor="name">Full Name</label>

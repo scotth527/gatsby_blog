@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,7 +7,10 @@ import BlogCards from "../components/blogcards"
 const SecondPage = ({ data }) => (
   <Layout>
     <SEO title="Page two" />
-    {/* <h1 style={{backgroundColor: 'green'}}>{data.site.siteMetadata.title}</h1> */}
+    <div style={{height:"400px", backgroundSize: "cover", backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundImage: `url(${'https://images.pexels.com/photos/212286/pexels-photo-212286.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'})`}} className="col-12 text-dark text-center text-align center mx-auto banner-text">
+        <h1 >All amazing things start with an idea</h1>
+    </div>
+              
     <div className="row">
         <div className="col-12 mx-auto d-flex justify-content-around flex-wrap">
         {

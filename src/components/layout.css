@@ -17,6 +17,7 @@ body {
 .banner-text {
   font-family: 'Monoton', cursive;
   letter-spacing: 0.1em;
+  padding:165px;
   text-shadow:
 		-1px -1px 0 #FFFFFF,
 		1px -1px 0 #FFFFFF,
