@@ -16,7 +16,7 @@ const SecondPage = ({ data }) => (
         {
             data.allMarkdownRemark.edges.map((item,index)=> {
                 return (
-                <BlogCards key={index} title={item.node.frontmatter.title} author={item.node.frontmatter.author} description={item.node.frontmatter.description} url={item.node.frontmatter.path}  date={item.node.frontmatter.date} />
+                <BlogCards key={index} image={item.node.frontmatter.image} alt={item.node.frontmatter.alt} title={item.node.frontmatter.title} author={item.node.frontmatter.author} description={item.node.frontmatter.description} url={item.node.frontmatter.path}  date={item.node.frontmatter.date} />
             );
             })
         }
@@ -43,6 +43,8 @@ export const query = graphql`
                         date
                         description
                         author
+                        image
+                        alt
                     }
                 }
             }

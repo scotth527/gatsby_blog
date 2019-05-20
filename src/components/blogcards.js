@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, Button, CardHeader, CardFooter, CardBody,
-  CardTitle, CardText } from 'reactstrap';
+  CardTitle, CardText, CardImg } from 'reactstrap';
 import { Link } from "gatsby"
+import Moment from 'react-moment';
 
 const BlogCards = (props) => {
     let shorten = (description) => {
@@ -20,11 +21,12 @@ const BlogCards = (props) => {
       <Card>
         <CardHeader>{props.title}</CardHeader>
         <CardBody>
+          <CardImg top width="100%" src={props.image} alt={props.alt} />
           <CardTitle>{"By: " + props.author}</CardTitle>
           <CardText>{shorten(props.description)}</CardText>
-          <Link to={props.url}><Button>Read more</Button></Link>
+          <Link to={props.url}><Button color="primary">Read more</Button></Link>
         </CardBody>
-        <CardFooter>{props.date}</CardFooter>
+        <CardFooter><Moment format="MMMM DD, YYYY" date={props.date} /></CardFooter>
       </Card>
     </div>
   );

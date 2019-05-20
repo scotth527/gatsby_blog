@@ -42,12 +42,12 @@ const About = ({ data }) => {
                 </div>
             </div> 
             <div className="row mb-3 d-flex justify-content-center">
-                <div className="col-lg-6 col-12 mr-auto">
+                <div className="col-lg-2 col-12">
                     <h2>Hobbies</h2>
                     <ul>
                         {
                             info.facts.map((item,index) => {
-                                return <li>{item}</li>
+                                return <li key={index}>{item}</li>
                             })
                         }
                     </ul>

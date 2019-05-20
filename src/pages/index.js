@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Contact from "../components/contactform"
@@ -27,33 +26,37 @@ export class IndexPage extends React.Component {
               <h2 >My name is Scott, and I'm a Full Stack web developer looking to build cool things</h2>
             </div>
           </div>
-          <div className="text-center mx-auto mt-3 mb-3 d-flex justify-content-center">
-            <div>
-              <h1 className="mt-3">Hi people</h1>
-              <p>Welcome to my page.</p>
-              <p>Always on the lookout for cool projects</p>
-            </div>
-            <div className="border border-dark rounded mx-auto" style={{ width:"40%", borderRadius: "100%" }}>
-              <Image />
-            </div>
+          <div className="mx-auto mt-3 mb-3 d-flex justify-content-center">
+              <div className="d-flex flex-column text-center">
+                  <h2>Always trying to achieve the best version of myself</h2>
+                  <p>I'm always looking to learn new technologies. I'm interested in learning new technologies to make better services and build better brands.</p>
+              </div>
+              <div style={{height:"400px", borderRadius:"50%", backgroundSize: "cover", backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundImage: `url(${'../images/professional.jpg'})`}}>
+              </div>
           </div>
             <div className="row">
               
-              <div className="mx-auto d-flex justify-content-between p-0">
-                <h2 id="projects">Projects</h2>
-                {
-                  this.state.project1 ?  <div onMouseOut={()=> {this.setState({project1:false})}} >BookSwap</div> : <div onMouseOver={()=> {this.setState({project1:true})}} className="col-lg-3 col-12">
+              
+              
+        <div className="col-12 mx-auto d-flex justify-content-around flex-wrap">
+             {
+                  this.state.project1 ?  <div className="col-lg-3 col-12 text-center border border-dark rounded mb-3" onMouseOut={()=> {this.setState({project1:false})}} ><h3 className="p-4">BookSwap</h3> <button className="btn btn-primary">See Demo</button> <button className="btn btn-success">See code</button></div> : <div onMouseOver={()=> {this.setState({project1:true})}} className="col-lg-3 col-12 border border-dark rounded mb-3">
                   <img src={BookSwap} alt="BookSwap Website"/>
                 </div>
                 }
-               
-                <div className="col-lg-3 col-12">
-                  <img src={BookSwap} alt="Meetup Website"/>
+                 {
+                  this.state.project1 ?  <div className="col-lg-3 col-12 text-center border border-dark rounded mb-3" onMouseOut={()=> {this.setState({project1:false})}} ><h3 className="p-4">BookSwap</h3> <button className="btn btn-primary">See Demo</button> <button className="btn btn-success">See code</button></div> : <div onMouseOver={()=> {this.setState({project1:true})}} className="col-lg-3 col-12 border border-dark rounded mb-3">
+                  <img src={BookSwap} alt="BookSwap Website"/>
                 </div>
-                <div className="col-lg-3 col-12">
-                  <img src={BookSwap} alt="Etch n sketch app"/>
+                }
+                 {
+                  this.state.project1 ?  <div className="col-lg-3 col-12 text-center border border-dark rounded mb-3" onMouseOut={()=> {this.setState({project1:false})}} ><h3 className="p-4">BookSwap</h3> <button className="btn btn-primary">See Demo</button> <button className="btn btn-success">See code</button></div> : <div onMouseOver={()=> {this.setState({project1:true})}} className="col-lg-3 col-12 border border-dark rounded mb-3">
+                  <img src={BookSwap} alt="BookSwap Website"/>
                 </div>
-              </div>
+                }
+        </div>
+    
+          
             </div>
             <Banner /> 
             <Contact />
