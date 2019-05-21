@@ -46,7 +46,7 @@ const About = ({ data }) => {
                     <h2>Hobbies</h2>
                     <ul>
                         {
-                            info.facts.map((item,index) => {
+                            info.facts.split(",").map((item,index) => {
                                 return <li key={index}>{item}</li>
                             })
                         }
@@ -76,6 +76,7 @@ export const query = graphql`
                         date
                         description
                         author
+                        type
                         facts
                     }
                 }

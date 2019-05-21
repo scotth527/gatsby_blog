@@ -32,7 +32,7 @@ export default SecondPage;
 export const query = graphql`
     query {
         allMarkdownRemark(
-            filter: { frontmatter: { path: { ne : "/about-me" } } }
+            filter: { frontmatter: { type: { eq : "blog" } } }
             sort: { fields: [frontmatter___date], order: DESC}
         ) {
             edges {
@@ -45,6 +45,7 @@ export const query = graphql`
                         author
                         image
                         alt
+                        type
                     }
                 }
             }
