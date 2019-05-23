@@ -2,7 +2,7 @@
 path: "/blog/my-third-post"
 date: "2017-11-07"
 title: "My third blog post"
-author: "Geoffrey"
+author: "Scott Huang"
 image: "https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
 alt: "coding and coffee"
 type: "blog"

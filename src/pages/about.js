@@ -42,7 +42,7 @@ const About = ({ data }) => {
                 </div>
             </div> 
             <div className="row mb-3 d-flex justify-content-center">
-                <div className="col-lg-2 col-12">
+                <div className="col-lg-2 col-4 text-center">
                     <h2>Hobbies</h2>
                     <ul>
                         {
