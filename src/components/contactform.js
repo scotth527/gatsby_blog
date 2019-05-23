@@ -10,7 +10,7 @@ export default class Contact extends React.Component {
   
   render() {
     return (
-    <div id="contact">
+    <div>
         <form className="col-lg-6 col-12 mx-auto text-center" action="https://formspree.io/scottyh527@gmail.com" method="POST">
             <h1 className="mt-3">Contact Me</h1>
             <div className="col-12 mx-auto d-flex flex-column">

@@ -6,9 +6,11 @@ import Contact from "../components/contactform"
 import Banner from "../components/jumbotron"
 import BookSwap from "../images/bookswap.gif"
 import LinkCards from "../components/linkcards"
-import { graphql, StaticQuery  } from "gatsby"
+import { graphql } from "gatsby"
 import ProjectCards from "../components/projectcard"
 import Professional from "../images/professional.jpg"
+import Todo from "../images/todo.gif"
+import Meetup from "../images/meetup.gif"
 
 export class IndexPage extends React.Component {
   constructor() {
@@ -21,6 +23,7 @@ export class IndexPage extends React.Component {
   	}
 	render() {
 	  console.log(this.props.data);
+	  const gifs = [BookSwap, Meetup, Todo];
 		return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -39,31 +42,35 @@ export class IndexPage extends React.Component {
               <div style={{maxHeight:"250px", maxWidth:"250px", borderRadius:"50%", backgroundSize: "cover", backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundImage: `url(${Professional})`}}>
               </div>
           </div>
+            <div className="mx-auto text-center">
+              <h1 id="projects">Projects</h1>
+            </div>
             <div className="row">
                
               
               
               <div className="col-12 mx-auto d-flex justify-content-around flex-wrap text-center">
+                  
                    {
-                      this.state.project1 ?  
-                        <div style={{minHeight:"300px"}} className="col-lg-4 col-12 text-center border border-dark rounded mb-3 p-0" onMouseOut={()=> {this.setState({project1:false})}} >
-                          <h3 className="p-4">BookSwap</h3>
-                          <div className="pb-3">
-                            <button className="btn btn-primary">See Demo</button> 
-                            <button className="btn btn-success">See code</button>
-                          </div>
-                        </div> 
+                   
+                      this.props.data.allMarkdownRemark.edges.map((item,index)=> {
+                        return (
+                        this.state["project" + index] ?  
+                          <LinkCards description={item.node.frontmatter.description} key={item.node.frontmatter.title} title={item.node.frontmatter.title} demo={item.node.frontmatter.demo} code={item.node.frontmatter.repository} function={() => this.setState({["project" + index]:false})}/>
                           : 
-                          <div style={{minHeight:"300px"}} onMouseOver={()=> {this.setState({project1:true})}} className="col-lg-4 col-12 border border-dark rounded mb-3 p-0">
-                        <img style={{width:"100%", height:"100%"}} src={BookSwap} alt="BookSwap Website"/>
-                      </div>
+                          <ProjectCards key={item.node.frontmatter.title} change={()=>this.setState({["project" + index]:true})} gif={gifs[index]}/>);
+                      })
+                      
+                        
                    }
               </div>
     
           
             </div>
             <Banner /> 
-            <Contact />
+            <div id="contact">
+              <Contact />
+            </div>
         </div>
       </Layout>
     );
@@ -88,6 +95,8 @@ export const query = graphql`
                         image
                         alt
                         type
+                        demo
+                        repository
                     }
                 }
             }
