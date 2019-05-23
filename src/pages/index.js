@@ -22,7 +22,7 @@ export class IndexPage extends React.Component {
   		};
   	}
 	render() {
-	  const gifs = [BookSwap, Meetup, Todo];
+	  const gifs = [BookSwap, Todo, Meetup];
 		return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
