@@ -8,7 +8,6 @@ import Profilepic from "../images/professional.jpg"
 const About = ({ data }) => {
     
   let info = data.allMarkdownRemark.edges[0].node.frontmatter;
-  console.log  (info);
   const skills = [
       {
       tech:"Javascript", color:"success" , percent:98
@@ -32,7 +31,6 @@ const About = ({ data }) => {
   return (
       <Layout>
         <SEO title="Page two" />
-        {/* <h1 style={{backgroundColor: 'green'}}>{data.site.siteMetadata.title}</h1> */}
         <div className="container-fluid wrapper">
             <div className="row">
                 <div className="col-lg-9 col-12 mt-3 mx-auto text-center">
