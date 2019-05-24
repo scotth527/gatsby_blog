@@ -10,7 +10,9 @@ a.nav-link, .navbar-brand {
 body {
   margin: 0;
 }
-
+.profile-pic {
+  margin-top: 100px;
+}
 .container-fluid.wrapper {
     position: relative;
     min-height: 80vh;

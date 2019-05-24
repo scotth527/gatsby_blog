@@ -24,7 +24,7 @@ const BlogCards = (props) => {
           <CardImg top width="100%" src={props.image} alt={props.alt} />
           <CardTitle>{"By: " + props.author}</CardTitle>
           <CardText>{shorten(props.description)}</CardText>
-          <Link to={props.url}><Button color="primary">Read more</Button></Link>
+          <Link to={props.url}><Button alt="Link to blog cards" color="primary">Read more</Button></Link>
         </CardBody>
         <CardFooter><Moment format="MMMM DD, YYYY" date={props.date} /></CardFooter>
       </Card>

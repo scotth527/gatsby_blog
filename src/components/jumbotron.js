@@ -10,7 +10,7 @@ const Banner = (props) => {
         <p className="lead">Besides coding, I like to write out my thoughts, work process, and how I'm feeling.</p>
         <hr className="my-2" />
         <p className="lead pt-3">
-          <Link to="/blog"><Button color="primary">Check out my blog</Button></Link>
+          <Link to="/blog"><Button alt="Link to blog" color="primary">Check out my blog</Button></Link>
         </p>
       </Jumbotron>
     </div>

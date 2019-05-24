@@ -1,6 +1,6 @@
 ---
 path: "/blog/my-first-post"
-date: "2017-11-07"
+date: "2019-5-17"
 title: "Into the deep end"
 author: "Scott Huang"
 type: "blog"

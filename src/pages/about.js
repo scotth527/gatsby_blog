@@ -30,10 +30,10 @@ const About = ({ data }) => {
   ];
   return (
       <Layout>
-        <SEO title="Page two" />
+        <SEO title="About me" />
         <div className="container-fluid wrapper">
             <div className="row">
-                <div className="col-lg-9 col-12 mt-3 mx-auto text-center">
+                <div className="col-lg-9 col-12 profile-pic mx-auto text-center">
                     <img src={Profilepic} alt="Professional Pic" style={{borderRadius: "50%", width:"250px", height:"250px"}} />
                     <h1>{info.title}</h1>
                     <p>{info.description}</p>

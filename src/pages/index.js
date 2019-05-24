@@ -22,7 +22,7 @@ export class IndexPage extends React.Component {
   		};
   	}
 	render() {
-	  const gifs = [BookSwap, Todo, Meetup];
+	  const gifs = [BookSwap, Meetup, Todo];
 		return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -38,8 +38,8 @@ export class IndexPage extends React.Component {
                   <h2>Always trying to achieve the best version of myself</h2>
                   <p>I'm always looking to learn new technologies. I'm interested in learning new technologies to make better services and build better brands.</p>
               </div>
-              <div style={{maxHeight:"250px", maxWidth:"250px", borderRadius:"50%", backgroundSize: "cover", backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundImage: `url(${Professional})`}}>
-              </div>
+              {/*<div style={{maxHeight:"250px", maxWidth:"250px", borderRadius:"50%", backgroundSize: "cover", backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundImage: `url(${Professional})`}}> 
+              </div>*/}
           </div>
             <div className="mx-auto text-center">
               <h1 id="projects">Projects</h1>
@@ -50,14 +50,14 @@ export class IndexPage extends React.Component {
               
               <div className="col-12 mx-auto d-flex justify-content-around flex-wrap text-center">
                   
-                   {
+                   {  //maps the project cards and depending on whether they've been hovered on, maps the link cards
                    
                       this.props.data.allMarkdownRemark.edges.map((item,index)=> {
                         return (
                         this.state["project" + index] ?  
-                          <LinkCards description={item.node.frontmatter.description} key={item.node.frontmatter.title} title={item.node.frontmatter.title} demo={item.node.frontmatter.demo} code={item.node.frontmatter.repository} function={() => this.setState({["project" + index]:false})}/>
+                          <LinkCards description={item.node.frontmatter.description} author={item.node.frontmatter.author} key={item.node.frontmatter.title} title={item.node.frontmatter.title} demo={item.node.frontmatter.demo} code={item.node.frontmatter.repository} function={() => this.setState({["project" + index]:false})}/>
                           : 
-                          <ProjectCards key={item.node.frontmatter.title} change={()=>this.setState({["project" + index]:true})} gif={gifs[index]}/>);
+                          <ProjectCards key={item.node.frontmatter.title} change={()=>this.setState({["project" + index]:true})} gifs={gifs[index]}/>);
                       })
                       
                         
@@ -81,7 +81,7 @@ export const query = graphql`
     query {
         allMarkdownRemark(
             filter: { frontmatter: { type: { eq : "project" } } }
-            sort: { fields: [frontmatter___date], order: DESC}
+            sort: { fields: [frontmatter___title], order: ASC}
         ) {
             edges {
                 node {
